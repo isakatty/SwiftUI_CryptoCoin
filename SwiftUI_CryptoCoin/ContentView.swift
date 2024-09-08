@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init() {
+        print("== ContentView init ==")
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationWrapper {
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Hello, world!")
+                
+                Text("하이루")
+            }
+            .padding()
+            .navigationTitle("Crypto Coin")
         }
-        .padding()
     }
 }
 
