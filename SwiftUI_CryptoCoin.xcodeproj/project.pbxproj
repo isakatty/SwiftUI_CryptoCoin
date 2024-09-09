@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C90629EC2C8F4C5300345763 /* CoinItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90629EB2C8F4C5300345763 /* CoinItemView.swift */; };
+		C90629EE2C8F4E8A00345763 /* CurrencyNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90629ED2C8F4E8A00345763 /* CurrencyNameView.swift */; };
+		C90629F02C8F4EAF00345763 /* CurrencyIncrementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90629EF2C8F4EAF00345763 /* CurrencyIncrementView.swift */; };
+		C90629F32C8F53AB00345763 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90629F22C8F53AB00345763 /* Double+.swift */; };
 		C9081C7D2C8DE2BB00491BC7 /* NavigationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9081C7C2C8DE2BB00491BC7 /* NavigationWrapper.swift */; };
 		C9081C822C8DECFA00491BC7 /* CoinNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9081C812C8DECFA00491BC7 /* CoinNetwork.swift */; };
 		C9081C842C8DED2500491BC7 /* CryptoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9081C832C8DED2500491BC7 /* CryptoResponse.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C90629EB2C8F4C5300345763 /* CoinItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinItemView.swift; sourceTree = "<group>"; };
+		C90629ED2C8F4E8A00345763 /* CurrencyNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyNameView.swift; sourceTree = "<group>"; };
+		C90629EF2C8F4EAF00345763 /* CurrencyIncrementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyIncrementView.swift; sourceTree = "<group>"; };
+		C90629F22C8F53AB00345763 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		C9081C7C2C8DE2BB00491BC7 /* NavigationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationWrapper.swift; sourceTree = "<group>"; };
 		C9081C812C8DECFA00491BC7 /* CoinNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinNetwork.swift; sourceTree = "<group>"; };
 		C9081C832C8DED2500491BC7 /* CryptoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoResponse.swift; sourceTree = "<group>"; };
@@ -40,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C90629F12C8F53A100345763 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C90629F22C8F53AB00345763 /* Double+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		C9081C7B2C8DE2AE00491BC7 /* CustomWrapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +67,9 @@
 		C9081C7E2C8DE2E700491BC7 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				C90629EB2C8F4C5300345763 /* CoinItemView.swift */,
+				C90629ED2C8F4E8A00345763 /* CurrencyNameView.swift */,
+				C90629EF2C8F4EAF00345763 /* CurrencyIncrementView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -98,6 +117,7 @@
 		C9FFDECC2C8AE7D200A17E09 /* SwiftUI_CryptoCoin */ = {
 			isa = PBXGroup;
 			children = (
+				C90629F12C8F53A100345763 /* Extension */,
 				C9081C872C8DEF5900491BC7 /* Mock */,
 				C9081C802C8DECF200491BC7 /* Network */,
 				C9081C7F2C8DEC6700491BC7 /* CustomModifier */,
@@ -190,9 +210,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C90629EC2C8F4C5300345763 /* CoinItemView.swift in Sources */,
+				C90629F32C8F53AB00345763 /* Double+.swift in Sources */,
+				C90629F02C8F4EAF00345763 /* CurrencyIncrementView.swift in Sources */,
 				C9081C7D2C8DE2BB00491BC7 /* NavigationWrapper.swift in Sources */,
 				C9FFDED02C8AE7D200A17E09 /* ContentView.swift in Sources */,
 				C9081C842C8DED2500491BC7 /* CryptoResponse.swift in Sources */,
+				C90629EE2C8F4E8A00345763 /* CurrencyNameView.swift in Sources */,
 				C9FFDECE2C8AE7D200A17E09 /* SwiftUI_CryptoCoinApp.swift in Sources */,
 				C9081C822C8DECFA00491BC7 /* CoinNetwork.swift in Sources */,
 			);
