@@ -15,6 +15,7 @@
 		C9081C822C8DECFA00491BC7 /* CoinNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9081C812C8DECFA00491BC7 /* CoinNetwork.swift */; };
 		C9081C842C8DED2500491BC7 /* CryptoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9081C832C8DED2500491BC7 /* CryptoResponse.swift */; };
 		C9081C862C8DEF5500491BC7 /* mockCryptoData.json in Resources */ = {isa = PBXBuildFile; fileRef = C9081C852C8DEF5500491BC7 /* mockCryptoData.json */; };
+		C98BB1CD2C93312800988FBF /* CurrencyBGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BB1CC2C93312800988FBF /* CurrencyBGView.swift */; };
 		C9B9DF562C92A8A200A2F7F8 /* NFTItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B9DF552C92A8A200A2F7F8 /* NFTItemView.swift */; };
 		C9B9DF5A2C92B08B00A2F7F8 /* CryptoTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B9DF592C92B08B00A2F7F8 /* CryptoTabView.swift */; };
 		C9B9DF5E2C92B30100A2F7F8 /* CoinSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B9DF5D2C92B30100A2F7F8 /* CoinSearchView.swift */; };
@@ -25,6 +26,7 @@
 		C9B9DF6E2C92F2FE00A2F7F8 /* CoinRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B9DF6D2C92F2FE00A2F7F8 /* CoinRepository.swift */; };
 		C9B9DF712C92F3B300A2F7F8 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C9B9DF702C92F3B300A2F7F8 /* RealmSwift */; };
 		C9B9DF732C92F5F500A2F7F8 /* RealmCoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B9DF722C92F5F500A2F7F8 /* RealmCoinModel.swift */; };
+		C9B9DF752C9307B200A2F7F8 /* FavedCoinCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B9DF742C9307B200A2F7F8 /* FavedCoinCardView.swift */; };
 		C9FFDECE2C8AE7D200A17E09 /* SwiftUI_CryptoCoinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FFDECD2C8AE7D200A17E09 /* SwiftUI_CryptoCoinApp.swift */; };
 		C9FFDED02C8AE7D200A17E09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FFDECF2C8AE7D200A17E09 /* ContentView.swift */; };
 		C9FFDED22C8AE7D300A17E09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9FFDED12C8AE7D300A17E09 /* Assets.xcassets */; };
@@ -40,6 +42,7 @@
 		C9081C812C8DECFA00491BC7 /* CoinNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinNetwork.swift; sourceTree = "<group>"; };
 		C9081C832C8DED2500491BC7 /* CryptoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoResponse.swift; sourceTree = "<group>"; };
 		C9081C852C8DEF5500491BC7 /* mockCryptoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockCryptoData.json; sourceTree = "<group>"; };
+		C98BB1CC2C93312800988FBF /* CurrencyBGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyBGView.swift; sourceTree = "<group>"; };
 		C9B9DF552C92A8A200A2F7F8 /* NFTItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTItemView.swift; sourceTree = "<group>"; };
 		C9B9DF592C92B08B00A2F7F8 /* CryptoTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTabView.swift; sourceTree = "<group>"; };
 		C9B9DF5D2C92B30100A2F7F8 /* CoinSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSearchView.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		C9B9DF662C92CEBD00A2F7F8 /* SearchResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseDTO.swift; sourceTree = "<group>"; };
 		C9B9DF6D2C92F2FE00A2F7F8 /* CoinRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRepository.swift; sourceTree = "<group>"; };
 		C9B9DF722C92F5F500A2F7F8 /* RealmCoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCoinModel.swift; sourceTree = "<group>"; };
+		C9B9DF742C9307B200A2F7F8 /* FavedCoinCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavedCoinCardView.swift; sourceTree = "<group>"; };
 		C9FFDECA2C8AE7D200A17E09 /* SwiftUI_CryptoCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_CryptoCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FFDECD2C8AE7D200A17E09 /* SwiftUI_CryptoCoinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_CryptoCoinApp.swift; sourceTree = "<group>"; };
 		C9FFDECF2C8AE7D200A17E09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				C90629ED2C8F4E8A00345763 /* CurrencyNameView.swift */,
 				C90629EF2C8F4EAF00345763 /* CurrencyIncrementView.swift */,
 				C9B9DF552C92A8A200A2F7F8 /* NFTItemView.swift */,
+				C9B9DF742C9307B200A2F7F8 /* FavedCoinCardView.swift */,
+				C98BB1CC2C93312800988FBF /* CurrencyBGView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 			files = (
 				C9B9DF5A2C92B08B00A2F7F8 /* CryptoTabView.swift in Sources */,
 				C90629EC2C8F4C5300345763 /* CoinItemView.swift in Sources */,
+				C9B9DF752C9307B200A2F7F8 /* FavedCoinCardView.swift in Sources */,
 				C90629F32C8F53AB00345763 /* Double+.swift in Sources */,
 				C90629F02C8F4EAF00345763 /* CurrencyIncrementView.swift in Sources */,
 				C9081C7D2C8DE2BB00491BC7 /* NavigationWrapper.swift in Sources */,
@@ -280,6 +287,7 @@
 				C9B9DF632C92C8BF00A2F7F8 /* MyPageView.swift in Sources */,
 				C9B9DF6E2C92F2FE00A2F7F8 /* CoinRepository.swift in Sources */,
 				C9081C842C8DED2500491BC7 /* CryptoResponse.swift in Sources */,
+				C98BB1CD2C93312800988FBF /* CurrencyBGView.swift in Sources */,
 				C9B9DF612C92B3AE00A2F7F8 /* FavoriteView.swift in Sources */,
 				C90629EE2C8F4E8A00345763 /* CurrencyNameView.swift in Sources */,
 				C9B9DF732C92F5F500A2F7F8 /* RealmCoinModel.swift in Sources */,
