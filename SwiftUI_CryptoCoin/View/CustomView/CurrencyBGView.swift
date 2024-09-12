@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct CurrencyBGView: View {
-    let price: String
+    let price: Int
     let increment: Double
     
     var body: some View {
         VStack(alignment: .trailing) {
-            Text(price)
+            Text("₩\(price.formatted(.number))")
                 .font(.headline)
                 .bold()
                 .fontWeight(.medium)

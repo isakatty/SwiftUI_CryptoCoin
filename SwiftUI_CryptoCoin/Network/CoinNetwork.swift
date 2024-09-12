@@ -73,7 +73,7 @@ final class CoinNetwork {
         }
         return result
     }
-    func searchMockCoin() async throws -> SearchResponseDTO {
+    func searchMockCoin() throws -> SearchResponseDTO {
         guard let path = Bundle.main.path(forResource: "mockSearchCoinData", ofType: "json"),
               let jsonString = try? String(contentsOfFile: path) else {
             print(CoinError.invalidURL.localizedDescription)
@@ -83,6 +83,39 @@ final class CoinNetwork {
         let data = jsonString.data(using: .utf8)
         guard let data = data,
               let result = try? decoder.decode(SearchResponseDTO.self, from: data) else {
+            print(CoinError.noData.localizedDescription)
+            throw CoinError.noData
+        }
+        return result
+    }
+    func fetchCoinMarket(query: String) async throws -> [CoinMarketResponseDTO] {
+        let marketURLStr = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=krw&ids=\(query)&sparkline=true"
+        guard let url = URL(string: marketURLStr) else {
+            print("URL Error")
+            throw CoinError.invalidURL
+        }
+        let (data, response) = try await URLSession.shared.data(for: URLRequest(url: url))
+        guard let response = response as? HTTPURLResponse,
+              response.statusCode == 200 else {
+            print("response Error")
+            throw CoinError.invalidResponse
+        }
+        guard let result = try? JSONDecoder().decode([CoinMarketResponseDTO].self, from: data) else {
+            print("data Error")
+            throw CoinError.noData
+        }
+        return result
+    }
+    func fetchMockCoinMarket() throws -> [CoinMarketResponseDTO] {
+        guard let path = Bundle.main.path(forResource: "mockCoinMarket", ofType: "json"),
+              let jsonString = try? String(contentsOfFile: path) else {
+            print(CoinError.invalidURL.localizedDescription)
+            throw CoinError.invalidURL
+        }
+        let decoder = JSONDecoder()
+        let data = jsonString.data(using: .utf8)
+        guard let data = data,
+              let result = try? decoder.decode([CoinMarketResponseDTO].self, from: data) else {
             print(CoinError.noData.localizedDescription)
             throw CoinError.noData
         }

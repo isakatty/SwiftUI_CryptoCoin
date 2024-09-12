@@ -17,6 +17,8 @@
 		C9081C862C8DEF5500491BC7 /* mockCryptoData.json in Resources */ = {isa = PBXBuildFile; fileRef = C9081C852C8DEF5500491BC7 /* mockCryptoData.json */; };
 		C98BB1CD2C93312800988FBF /* CurrencyBGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BB1CC2C93312800988FBF /* CurrencyBGView.swift */; };
 		C98BB1CF2C93345F00988FBF /* IncrementBgModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BB1CE2C93345F00988FBF /* IncrementBgModifier.swift */; };
+		C98BB1D12C9337A500988FBF /* CoinMarketResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BB1D02C9337A500988FBF /* CoinMarketResponseDTO.swift */; };
+		C98BB1D32C93391F00988FBF /* mockCoinMarket.json in Resources */ = {isa = PBXBuildFile; fileRef = C98BB1D22C93391F00988FBF /* mockCoinMarket.json */; };
 		C9B9DF562C92A8A200A2F7F8 /* NFTItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B9DF552C92A8A200A2F7F8 /* NFTItemView.swift */; };
 		C9B9DF5A2C92B08B00A2F7F8 /* CryptoTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B9DF592C92B08B00A2F7F8 /* CryptoTabView.swift */; };
 		C9B9DF5E2C92B30100A2F7F8 /* CoinSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B9DF5D2C92B30100A2F7F8 /* CoinSearchView.swift */; };
@@ -45,6 +47,8 @@
 		C9081C852C8DEF5500491BC7 /* mockCryptoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockCryptoData.json; sourceTree = "<group>"; };
 		C98BB1CC2C93312800988FBF /* CurrencyBGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyBGView.swift; sourceTree = "<group>"; };
 		C98BB1CE2C93345F00988FBF /* IncrementBgModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementBgModifier.swift; sourceTree = "<group>"; };
+		C98BB1D02C9337A500988FBF /* CoinMarketResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketResponseDTO.swift; sourceTree = "<group>"; };
+		C98BB1D22C93391F00988FBF /* mockCoinMarket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockCoinMarket.json; sourceTree = "<group>"; };
 		C9B9DF552C92A8A200A2F7F8 /* NFTItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTItemView.swift; sourceTree = "<group>"; };
 		C9B9DF592C92B08B00A2F7F8 /* CryptoTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTabView.swift; sourceTree = "<group>"; };
 		C9B9DF5D2C92B30100A2F7F8 /* CoinSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSearchView.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 				C9081C812C8DECFA00491BC7 /* CoinNetwork.swift */,
 				C9081C832C8DED2500491BC7 /* CryptoResponse.swift */,
 				C9B9DF662C92CEBD00A2F7F8 /* SearchResponseDTO.swift */,
+				C98BB1D02C9337A500988FBF /* CoinMarketResponseDTO.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 		C9081C872C8DEF5900491BC7 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				C98BB1D22C93391F00988FBF /* mockCoinMarket.json */,
 				C9B9DF642C92CC5B00A2F7F8 /* mockSearchCoinData.json */,
 				C9081C852C8DEF5500491BC7 /* mockCryptoData.json */,
 			);
@@ -265,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C98BB1D32C93391F00988FBF /* mockCoinMarket.json in Resources */,
 				C9FFDED52C8AE7D300A17E09 /* Preview Assets.xcassets in Resources */,
 				C9081C862C8DEF5500491BC7 /* mockCryptoData.json in Resources */,
 				C9B9DF652C92CC5B00A2F7F8 /* mockSearchCoinData.json in Resources */,
@@ -298,6 +305,7 @@
 				C9B9DF672C92CEBD00A2F7F8 /* SearchResponseDTO.swift in Sources */,
 				C9B9DF5E2C92B30100A2F7F8 /* CoinSearchView.swift in Sources */,
 				C9FFDECE2C8AE7D200A17E09 /* SwiftUI_CryptoCoinApp.swift in Sources */,
+				C98BB1D12C9337A500988FBF /* CoinMarketResponseDTO.swift in Sources */,
 				C9081C822C8DECFA00491BC7 /* CoinNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
