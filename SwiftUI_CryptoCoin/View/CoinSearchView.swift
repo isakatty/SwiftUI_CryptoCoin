@@ -9,22 +9,22 @@ import SwiftUI
 
 struct CoinSearchView: View {
     @State private var searchTxt: String = ""
-    @State private var searchedCoins: SearchResponse = .init(coins: [])
+    @State private var searchedCoins: SearchResponseDTO = .init(coins: [])
     
     var body: some View {
         NavigationWrapper {
             List(
-                $searchedCoins.coins,
+                searchedCoins.coins,
                 id: \.id
-            ) { $coin in
-                SearchedCoinView(coin: $coin)
+            ) { coin in
+                SearchedCoinView(coin: coin)
             }
             .listStyle(.plain)
             .searchable(text: $searchTxt)
             .onSubmit(of: .search) {
                 Task {
-//                    let result = try await CoinNetwork.shared.searchCoinNetwork(query: searchTxt)
-                    let result = try await CoinNetwork.shared.searchMockCoin().toDomain
+                    let result = try await CoinNetwork.shared.searchCoinNetwork(query: searchTxt)
+//                    let result = try await CoinNetwork.shared.searchMockCoin()
                     searchedCoins = result
                 }
             }
@@ -35,7 +35,10 @@ struct CoinSearchView: View {
 
 struct SearchedCoinView : View {
     
-    @Binding var coin: CoinDetailResponse
+    var coin: CoinDetailResponseDTO
+    
+    @State private var isFaved: Bool = false
+    @EnvironmentObject var favCoins: FavCoins
     
     var body: some View {
         Group {
@@ -58,12 +61,20 @@ struct SearchedCoinView : View {
                 Spacer()
                 
                 Button(action: {
-                    coin.isFav.toggle()
+                    isFaved.toggle()
+                    if isFaved {
+                        favCoins.add(coin.id)
+                    } else {
+                        favCoins.remove(coin.id)
+                    }
                 }, label: {
-                    Image(systemName: coin.isFav ? "star.fill" : "star" )
+                    Image(systemName: isFaved ? "star.fill" : "star" )
                         .tint(.purple)
                 })
             }
+        }
+        .onAppear {
+            isFaved = favCoins.coins.contains(where: { $0.id == coin.id })
         }
     }
 }

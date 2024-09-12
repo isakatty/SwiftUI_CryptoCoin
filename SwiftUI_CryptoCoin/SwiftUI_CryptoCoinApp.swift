@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SwiftUI_CryptoCoinApp: App {
+    @StateObject private var favCoins = FavCoins()
+    
     var body: some Scene {
         WindowGroup {
             CryptoTabView()
+                .environmentObject(favCoins)
         }
     }
 }
