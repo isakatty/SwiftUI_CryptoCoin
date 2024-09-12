@@ -48,5 +48,4 @@ struct NFTItemData: Decodable, Hashable {
     let sparkline: String
     let floor_price: String
     let floor_price_in_usd_24h_percentage_change: String
-    
 }
