@@ -42,7 +42,6 @@ final class CoinNetwork {
         }
         .resume()
     }
-    
     func mockupDataTest(handler: @escaping (CryptoResponse) -> Void){
         guard let path = Bundle.main.path(forResource: "mockCryptoData", ofType: "json"),
               let jsonString = try? String(contentsOfFile: path) else {
@@ -58,4 +57,41 @@ final class CoinNetwork {
             print("??")
         }
     }
+    
+    func searchCoinNetwork(query: String) async throws -> SearchResponseDTO {
+        let searchURLStr = "https://api.coingecko.com/api/v3/search?query=\(query)"
+        guard let url = URL(string: searchURLStr) else {
+            throw CoinError.invalidURL
+        }
+        let (data, response) = try await URLSession.shared.data(for: URLRequest(url: url))
+        guard let response = response as? HTTPURLResponse,
+              response.statusCode == 200 else {
+            throw CoinError.invalidResponse
+        }
+        guard let result = try? JSONDecoder().decode(SearchResponseDTO.self, from: data) else {
+            throw CoinError.noData
+        }
+        return result
+    }
+    func searchMockCoin() async throws -> SearchResponseDTO {
+        guard let path = Bundle.main.path(forResource: "mockSearchCoinData", ofType: "json"),
+              let jsonString = try? String(contentsOfFile: path) else {
+            print(CoinError.invalidURL.localizedDescription)
+            throw CoinError.invalidURL
+        }
+        let decoder = JSONDecoder()
+        let data = jsonString.data(using: .utf8)
+        guard let data = data,
+              let result = try? decoder.decode(SearchResponseDTO.self, from: data) else {
+            print(CoinError.noData.localizedDescription)
+            throw CoinError.noData
+        }
+        return result
+    }
+}
+
+enum CoinError: Error {
+    case invalidURL
+    case invalidResponse
+    case noData
 }
