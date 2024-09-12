@@ -38,7 +38,7 @@ struct FavedCoinCardView: View {
                         .padding()
                     }
                     CurrencyBGView(price: "234234", increment: 6.9)
-                        .padding()
+                        .padding(.trailing)
                 }
             }
             .padding()

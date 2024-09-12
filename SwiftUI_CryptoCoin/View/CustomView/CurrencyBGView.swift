@@ -18,9 +18,8 @@ struct CurrencyBGView: View {
                 .bold()
                 .fontWeight(.medium)
             Text(increment > 0 ? "+\(increment.formattedTwoDecimal)%" : "-\(increment.formattedTwoDecimal)%")
-                .font(.footnote)
-                .foregroundStyle(increment > 0 ? .red : .blue)
-                .background(increment > 0 ? .red.opacity(0.2) : .blue.opacity(0.2))
+                .incrementBGModifier(increment: increment)
+                .padding(.bottom)
         }
     }
 }
