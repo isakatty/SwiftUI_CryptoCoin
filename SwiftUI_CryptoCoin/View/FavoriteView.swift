@@ -28,7 +28,8 @@ struct FavoriteView: View {
                 .task {
                     Task {
                         for coin in favCoins.coins {
-                            let result = try await CoinNetwork.shared.fetchCoinMarket(query: coin.id)
+//                            let result = try await CoinNetwork.shared.fetchCoinMarket(query: coin.id)
+                            let result = try CoinNetwork.shared.fetchMockCoinMarket()
                             favCoinArray.append(result.first!)
                         }
                     }
