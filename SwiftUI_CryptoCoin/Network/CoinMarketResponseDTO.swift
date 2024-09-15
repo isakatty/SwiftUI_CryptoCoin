@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CoinMarketResponseDTO: Decodable, Identifiable {
+struct CoinMarketResponseDTO: Decodable, Identifiable, Hashable {
     let id: String
     let symbol: String
     let name: String
@@ -17,10 +17,11 @@ struct CoinMarketResponseDTO: Decodable, Identifiable {
     let low_24h: Int
     let high_24h: Int
     let ath: Int // 최고가
+    let atl: Int // 최저가
     let ath_date: String
     let last_updated: String
     let sparkline_in_7d: SparklineDetailDTO
 }
-struct SparklineDetailDTO: Decodable {
+struct SparklineDetailDTO: Decodable, Hashable {
     let price: [Double]
 }

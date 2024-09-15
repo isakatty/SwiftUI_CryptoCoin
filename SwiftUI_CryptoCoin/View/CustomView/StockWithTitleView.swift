@@ -21,6 +21,7 @@ struct StockWithTitleView: View {
             
             Text("₩\(price.formatted(.number))")
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 

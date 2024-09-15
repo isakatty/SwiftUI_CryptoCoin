@@ -18,7 +18,7 @@ struct FavoriteView: View {
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2)) {
                     ForEach(favCoinArray, id: \.id) { coin in
                         NavigationLink(destination: {
-                            Text("하이루")
+                            LazyNavigationView(CoinDetailView(coinDetailInfo: coin))
                         }, label: {
                             FavedCoinCardView(coinDetail: coin)
                         })

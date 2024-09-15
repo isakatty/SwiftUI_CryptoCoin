@@ -60,6 +60,7 @@ struct FavedCoinCardView: View {
             low_24h: 74630375,
             high_24h: 78364591,
             ath: 98576718,
+            atl: 75594,
             ath_date: "2024-06-07T13:55:20.414Z",
             last_updated: "2024-09-12T14:55:01.773Z",
             sparkline_in_7d: .init(price: [])
